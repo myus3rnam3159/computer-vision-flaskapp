@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<script>
+      var jsonfile ={{jsonfile}};
+
+
+
+</script>
+<style>
+      .img-container {
+        text-align: center;
+      }
+
+
+
+</style>
+<body>
+<section>
+    <div class="container p-5">
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg">
+
+                    <div class="alert alert-success" id="success_alert" role="alert" style="display:none;"></div>
+
+                    <div class="img-container">
+                        <h3>Object Detection Application</h3>
+                        <p>Detect object in image</p>
+
+
+                        <!--  <div>
+                              {{jsonfile}}
+                          </div> -->
+
+
+                        {% if is_image %}
+                        {% if is_show_button %}
+                        <form action="/detect_object" target="_blank">
+                            <img alt="User Image" src="{{ user_image }}" width="500">
+                            <button class="btn btn-primary btn-block rounded-pill shadow" style="width:200px"
+                                    type="submit"> Detect Object
+                            </button>
+                        </form>
+                        {% else %}
+
+                        <img alt="User Image" src="{{ user_image }}" width="500">
+
+                        {% endif %}
+
+                        {% else %}
+                        <form action="/detect_object" target="_blank">
+                            <video class="img-container" controls="controls" src="{{ user_image }}" width="500"></video>
+                            <button class="btn btn-primary btn-block rounded-pill shadow" style="width:200px"
+                                    type="submit"> Detect Object
+                            </button>
+                        </form>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>
