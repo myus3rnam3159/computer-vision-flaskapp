@@ -5,7 +5,7 @@ COMPUTER VISION APP
 * Format code trong pycharm: ctrl shift alt l
 * Lỗi với cv2: https://github.com/opencv/opencv/issues/20997#issuecomment-1328068006
 * Lỗi vời file favicon: https://www.facebook.com/groups/cs50/posts/1752004878279883/
-* Hiện tại app chỉ có thể tải và xuất hình ảnh và video
+* Hiện tại app chỉ có thể tải và xuất hình ảnh và video, sau đó lưu dữ liệu vào mongodb atlas.
 
 1. Cài đặt
 
